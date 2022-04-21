@@ -16,7 +16,9 @@ import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 
 import heroes.*;
+import villains.Carnage;
 import villains.DrDoom;
+import villains.Sandman;
 
 public class Selection {
 
@@ -51,7 +53,9 @@ public class Selection {
         names.add("Sandman");
         names.add("Thanos");
         // 1. ADD MORE NAMES TO THE LIST HERE:
-
+        names.add("Mystique");
+        names.add("Electro");
+        names.add("RedSkull");
         // END OF PART 1
         names.sort(null);
         names.add(0, "Make a selection");
@@ -67,7 +71,9 @@ public class Selection {
         }
         if (selectedName.equals("Carnage"))
         {
-
+            Carnage theCharacter = new Carnage("Carnage", "Symbiote Powers");
+            theText = theCharacter.toString() + "\n" + theCharacter.doEvilDeed();
+            theImage = null;
         }
         else if (selectedName.equals("Doctor Strange"))
         {
@@ -81,8 +87,8 @@ public class Selection {
         }
         else if (selectedName.equals("Dr Doom"))
         {
-            DrDoom theCharacter = new DrDoom("Dr. Doom", "Dark mysticicim and sorcery");
-            theText = theCharacter.toString() + "\n";
+            DrDoom theCharacter = new DrDoom("Dr. Doom", "Dark mysticism and sorcery");
+            theText = theCharacter.toString() + "\n" + theCharacter.doEvilDeed();
             theImage = null;
         }
         else if (selectedName.equals("Falcon"))
@@ -137,7 +143,9 @@ public class Selection {
         }
         else if (selectedName.equals("Sandman"))
         {
-
+            Sandman theCharacter = new Sandman("Sandman", "Sand Transformation");
+            theText = theCharacter.toString() + "\n" + theCharacter.doEvilDeed();
+            theImage = null;
         }
         else if (selectedName.equals("Spider Man"))
         {
@@ -160,7 +168,7 @@ public class Selection {
         else if (selectedName.equals("Wanda"))
         {
             Wanda theCharacter = new Wanda("Wanda", "Magic");
-            theText = theCharacter.toString() + "\n";
+            theText = theCharacter.toString() + "\n" + theCharacter.fly();
             theImage = null;
         }
         else if (selectedName.equals("War Machine"))
