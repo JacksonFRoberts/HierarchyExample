@@ -69,7 +69,7 @@ public class Selection {
         {
 
         }
-        if (selectedName.equals("Carnage"))
+        else if (selectedName.equals("Carnage"))
         {
             Carnage theCharacter = new Carnage("Carnage", "Symbiote Powers");
             theText = theCharacter.toString() + "\n" + theCharacter.doEvilDeed();
@@ -85,7 +85,7 @@ public class Selection {
             theText = theCharacter + "\nQuote: " + theCharacter.getQuote();
             theImage = ImageLoader.setImage(theCharacter.getImageFileName());
         }
-        else if (selectedName.equals("Dr Doom"))
+        else if (selectedName.equals("DrDoom"))
         {
             DrDoom theCharacter = new DrDoom("Dr. Doom", "Dark mysticism and sorcery");
             theText = theCharacter.toString() + "\n" + theCharacter.doEvilDeed();
